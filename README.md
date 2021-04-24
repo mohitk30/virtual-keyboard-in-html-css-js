@@ -10,3 +10,7 @@
    java script
    CSS
   ```
+  ## About
+  This repo is towards building a virtual keyboard with 
+  html,CSS and java script when i attended a one day 
+  workshop of massi 
