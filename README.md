@@ -5,8 +5,8 @@
   </p>
 ## Technology Used
 
--HTML
-
--CSS
-
--JAVA SCRIPT
+```bash
+   html
+   java script
+   CSS
+  ```
