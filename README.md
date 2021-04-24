@@ -6,5 +6,7 @@
 ## Technology Used
 
 -HTML
+
 -CSS
+
 -JAVA SCRIPT
