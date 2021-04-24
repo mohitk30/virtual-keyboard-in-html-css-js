@@ -1,0 +1,167 @@
+<!-- This is Mohit kumar , this project is towards masai workshop on 24 april 2021-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Keyboard</title>
+</head>
+<style type="text/css">
+    #sp {
+        height: 64px;
+        width: 64px;
+        background-color: black;
+        color: white;
+        font-size: 32px;
+        margin: 10px;
+    }
+    
+    button sp {
+        font-size: 0px;
+    }
+    
+    .line {
+        text-align: center;
+    }
+    
+    #keys_output {
+        height: 50px;
+        width: 900px;
+        background-color: wheat;
+        font-size: 48px;
+        margin-left: 180px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    #all {
+        height: 64px;
+        background-color: black;
+        color: white;
+        width: 400px;
+        margin-left: 250px;
+        font-size: 32px;
+    }
+    
+    #bk {
+        width: 320px;
+        margin-left: 20px;
+        height: 64px;
+        background-color: black;
+        color: white;
+        font-size: 32px;
+    }
+    
+    #bott {
+        margin-top: 30px;
+    }
+    
+    #caps {
+        width: 200px;
+        height: 64px;
+        background-color: black;
+        color: white;
+        font-size: 32px;
+    }
+</style>
+
+<body>
+    <div id="keys_output" class="line">
+
+    </div>
+    <div class="line">
+        <button id="sp" onclick="button_clicked('1')">1</button>
+        <button id="sp" onclick="button_clicked('2')">2</button>
+        <button id="sp" onclick="button_clicked('3')">3</button>
+        <button id="sp" onclick="button_clicked('4')">4</button>
+        <button id="sp" onclick="button_clicked('5')">5</button>
+        <button id="sp" onclick="button_clicked('6')">6</button>
+        <button id="sp" onclick="button_clicked('7')">7</button>
+        <button id="sp" onclick="button_clicked('8')">8</button>
+        <button id="sp" onclick="button_clicked('9')">9</button>
+        <button id="sp" onclick="button_clicked('0')">0</button></div>
+
+    <div class="line">
+        <button id="sp" onclick="button_clicked('Q')">Q</button>
+        <button id="sp" onclick="button_clicked('W')">W</button>
+        <button id="sp" onclick="button_clicked('E')">E</button>
+        <button id="sp" onclick="button_clicked('R')">R</button>
+        <button id="sp" onclick="button_clicked('T')">T</button>
+        <button id="sp" onclick="button_clicked('Y')">Y</button>
+        <button id="sp" onclick="button_clicked('U')">U</button>
+        <button id="sp" onclick="button_clicked('I')">I</button>
+        <button id="sp" onclick="button_clicked('O')">O</button>
+        <button id="sp" onclick="button_clicked('P')">P</button></div>
+    <div class="line">
+        <button id="sp" onclick="button_clicked('A')">A</button>
+        <button id="sp" onclick="button_clicked('S')">S</button>
+        <button id="sp" onclick="button_clicked('D')">D</button>
+        <button id="sp" onclick="button_clicked('F')">F</button>
+        <button id="sp" onclick="button_clicked('G')">G</button>
+        <button id="sp" onclick="button_clicked('H')">H</button>
+        <button id="sp" onclick="button_clicked('J')">J</button>
+        <button id="sp" onclick="button_clicked('K')">K</button>
+        <button id="sp" onclick="button_clicked('L')">L</button>
+    </div>
+    <div class="line">
+        <button id="caps" onclick="button_clicked_caps()">CAPS</button>
+        <button id="sp" onclick="button_clicked('Z')">Z</button>
+        <button id="sp" onclick="button_clicked('X')">X</button>
+        <button id="sp" onclick="button_clicked('C')">C</button>
+        <button id="sp" onclick="button_clicked('V')">V</button>
+        <button id="sp" onclick="button_clicked('B')">B</button>
+        <button id="sp" onclick="button_clicked('N')">N</button>
+        <button id="sp" onclick="button_clicked('M')">M</button>
+    </div>
+    <div id="bott">
+        <button id="all" onclick="button_clicked(' ')"> SPACE</button>
+        <button id="bk" onclick="button_clicked_back()">CLEAR</button>
+
+    </div>
+
+    <script>
+        var print = "";
+        var t = "";
+        var back = false
+        var caps = false;
+
+        function button_clicked_caps() {
+            if (caps)
+                caps = false;
+            else {
+                caps = true;
+            }
+
+
+        }
+
+
+
+
+        function button_clicked(character) {
+            if (caps) {
+                print = print + character;
+
+            } else {
+
+                print = print + character.toLowerCase();
+            }
+            var output = document.getElementById("keys_output");
+            output.textContent = print;
+
+
+        }
+
+        function button_clicked_back() {
+            var temp = "";
+            var output = document.getElementById("keys_output")
+            output.textContent = temp
+            print = "";
+        }
+    </script>
+
+</body>
+
+</html>
